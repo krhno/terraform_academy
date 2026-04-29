@@ -1,19 +1,11 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
 provider "aws" {
   region = var.region
 }
 
 # VPC Module
 module "vpc_module" {
-  source = "./vpc_module"
+  source  = "app.terraform.io/oruiz/vpc_module/aws"
+  version = "1.0.1"
 
   region                      = var.region
   project_name                = var.project_name
@@ -25,7 +17,8 @@ module "vpc_module" {
 
 # ECS Module
 module "ecs_module" {
-  source = "./ecs_module"
+  source  = "app.terraform.io/oruiz/ecs_module/aws"
+  version = "1.0.0"
 
   allowed_ip   = var.allowed_ip
   key_name     = var.key_name
