@@ -18,11 +18,12 @@ module "vpc_module" {
 # ECS Module
 module "ecs_module" {
   source  = "app.terraform.io/oruiz/ecs_module/aws"
-  version = "1.0.0"
+  version = "1.0.1"
 
   allowed_ip   = var.allowed_ip
   key_name     = var.key_name
   docker_image = var.docker_image
+  vpc_id       = module.vpc_module.vpc_id
 
   depends_on = [module.vpc_module]
 }
