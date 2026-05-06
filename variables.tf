@@ -50,11 +50,6 @@ variable "allowed_ip" {
   default     = "177.249.60.131/32"
 }
 
-variable "key_name" {
-  type        = string
-  description = "EC2 key pair name for ECS instances"
-}
-
 variable "docker_image" {
   type        = string
   description = "Docker image URI to deploy in the ECS cluster"
