@@ -22,7 +22,6 @@ module "ecs_module" {
   version = "1.1.0"
 
   allowed_ip   = var.allowed_ip
-  key_name     = var.key_name
   docker_image = var.docker_image
   vpc_id       = module.vpc_module.vpc_id
   private_app_subnet_id = module.vpc_module.private_app_subnet_id
