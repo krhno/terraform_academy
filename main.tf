@@ -5,7 +5,7 @@ provider "aws" {
 # VPC Module
 module "vpc_module" {
   source  = "app.terraform.io/oruiz/vpc_module/aws"
-  version = "1.0.1"
+  version = "1.0.2"
 
   region                      = var.region
   project_name                = var.project_name
@@ -18,7 +18,7 @@ module "vpc_module" {
 # ECS Module
 module "ecs_module" {
   source  = "app.terraform.io/oruiz/ecs_module/aws"
-  version = "1.0.3"
+  version = "1.0.4"
 
   allowed_ip   = var.allowed_ip
   key_name     = var.key_name
