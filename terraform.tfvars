@@ -9,14 +9,12 @@ environment  = "testing"
 
 # VPC Configuration
 vpc_cidr                  = "192.168.0.0/16"
-public_subnet_cidr        = "192.168.0.0/24"
-private_app_subnet_cidr   = "192.168.1.0/24"
+public_subnet_cidr_az1    = "192.168.0.0/24"
+public_subnet_cidr_az2    = "192.168.1.0/24"
+private_app_subnet_cidr   = "192.168.2.0/24"
 
 # ECS Configuration
-allowed_ip = "177.249.60.131/32"  # Change to your IP address
-
-# EC2 Key Pair - REQUIRED
-key_name = "oruiz-key"   # Change to your EC2 key pair name
+allowed_ip = "72.14.201.213/32"  # Change to your IP address
 
 # Docker Image - Can be ECR or any public Docker registry
 docker_image = "005747243382.dkr.ecr.us-east-1.amazonaws.com/terraform-academy/oruiz:latest"
